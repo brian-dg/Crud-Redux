@@ -1,20 +1,62 @@
-  
 {
-    " productos " : [
-      {
-        " nombre " : " Rib Eye " ,
-        " precio " : " 500 " ,
-        " id " : 7
-      },
-      {
-        " nombre " : " Jugo de Limón " ,
-        " precio " : 100 ,
-        " id " : 9
-      },
-      {
-        " nombre " : " 1 " ,
-        " precio " : 2 ,
-        " id " : 10
-      }
-    ]
+  "productos": [
+    {
+      "nombre": "Rib Eye",
+      "precio": "500",
+      "id": 7
+    },
+    {
+      "nombre": "Jugo de Limón",
+      "precio": 100,
+      "id": 9
+    },
+    {
+      "nombre": "1",
+      "precio": 2,
+      "id": 10
+    },
+    {
+      "juego de naraja": "",
+      "id": 11
+    },
+    {
+      "juego de naraja": "",
+      "id": 12
+    },
+    {
+      "nombre": "juego de manzana",
+      "precio": 300,
+      "id": 13
+    },
+    {
+      "nombre": "juego de peras",
+      "precio": 100,
+      "id": 14
+    },
+    {
+      "nombre": "juego de peras",
+      "precio": 123,
+      "id": 15
+    },
+    {
+      "nombre": "juego de naraja",
+      "precio": 200,
+      "id": 16
+    },
+    {
+      "nombre": "juego de naraja",
+      "precio": 2005,
+      "id": 17
+    },
+    {
+      "nombre": "pera",
+      "precio": 120,
+      "id": 18
+    },
+    {
+      "nombre": "Limon",
+      "precio": 20,
+      "id": 19
+    }
+  ]
 }

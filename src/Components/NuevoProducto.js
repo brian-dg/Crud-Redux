@@ -4,7 +4,7 @@ import {useDispatch, useSelector } from 'react-redux';
 //actions de redux 
 import {crearNuevoProductoAction} from '../actions/productoActions';
 
-const NuevoProducto =() => {
+const NuevoProducto =({history}) => {
 
     //State de componente 
     const [nombre, guardarNombre] = useState('');
@@ -13,6 +13,12 @@ const NuevoProducto =() => {
     
     //utilizar use dispatch y te crea una funcion 
     const dispatch = useDispatch();
+
+    //Acceder al state del store 
+    const cargando = useSelector(state => state.productos.loading); 
+    const error = useSelector(state => state.productos.error); 
+
+
 //mandar llamar el acion de productoAction
     const agregarProducto = (producto) => dispatch(crearNuevoProductoAction(producto) );
 
@@ -29,10 +35,13 @@ const NuevoProducto =() => {
 
         //crear el nuevo producto 
 
-        agregarProducto(
+        agregarProducto({
             nombre,
-            precio
+            precio}
         );
+
+        //redireccionar 
+        history.push('/');
     }
     return (
         <div className="row justify-content-center">
@@ -64,7 +73,7 @@ const NuevoProducto =() => {
                                 placeholder="Precio Producto"
                                 name="precio"
                                 value={precio}
-                                onChange={e => guardarPrecio (Number(e.target.value))}
+                                onChange={e => guardarPrecio(Number(e.target.value))}
                             />    
                         </div>  
 
@@ -75,6 +84,8 @@ const NuevoProducto =() => {
                         </button>
 
                     </form>
+                    {cargando ? <p>Cargando...</p> : null}
+                    {error ? <p className="alert alert-danger p2 mt-4 text-center">Hubo un error</p> : null}
                 </div>
             </div>
         </div>
